@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Roboto Mono", monospace;
+}
+body{
+    background-color: #121317;
+}
+.container{
+    background-color: #202229;
+    width: 60vmin;
+    padding: 2.5em 2em;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 3vmin;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px #9f25b8;
+}
+#output-color{
+    position: relative;
+    height: 30vmin;
+    width: 30vmin;
+    border: 0.3em solid #f5f5f5;
+    border-radius: 50%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+#output-color span{
+    display: block;
+    width: calc( 100% - 20px );
+    height: calc( 100% - 20px);
+    border-radius: 50%;
+}
+.show-color{
+    animation: pop 0.8s;
+}
+@keyframes pop{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+input[type="text"]{
+    width: 100%;
+    background-color: transparent;
+    border: 2.5px dashed #f5f5f5;
+    font-size: 1.3em;
+    padding: 0.8em 0;
+    margin: 1em 0;
+    border-radius: 8px;
+    color: #f5f5f5;
+    text-align: center;
+}
+input[type="text"]::-moz-selection{
+    background: transparent;
+}
+input[type="text"]::selection{
+    background: transparent;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+.btns button{
+    font-size: 1em;
+    padding: 0.85em 1.2em;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#gen-btn{
+    background-color: #800080;
+    color: whitesmoke;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+#gen-btn:hover {
+    box-shadow: 0 0 20px 0px black;
+    transition: 0.5s;
+}
+
+#copy-btn{
+    border: 4px solid #800080;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    color: white;
+}
+
+#copy-btn:hover {
+    box-shadow: 0 0 20px 0px black;
+    transition: 0.5s;
+}
+
+.custom-alert{
+    background-color: rgba(255,255,255,0.3);
+    font-size: 2.5vmin;
+    padding: 1em 1.5em;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #f5f5f5;
+    transition: 0.5s;
+    transform: translateX(calc(100% + 10px));
+    border-radius: 8px;
+}
